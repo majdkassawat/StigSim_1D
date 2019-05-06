@@ -25,7 +25,7 @@ import sys
 
 #libraries to be deleted later
 import textwrap as tw
-get_ipython().run_line_magic('matplotlib', 'qt')
+#get_ipython().run_line_magic('matplotlib', 'qt')this one
 #get_ipython().run_line_magic('matplotlib', 'inline')
 
 X_uint= 254
