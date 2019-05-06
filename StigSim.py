@@ -378,12 +378,12 @@ class Obj:
     
 class StigSim:
     
-    def __init__(self, config_file_path):
-#    def __init__(self, xml_string):
-        self.__xml_file_path=config_file_path
-        tree = ET.parse(config_file_path)
-#        root = ET.fromstring(xml_string)
-        root = tree.getroot() #this is the xml node
+#    def __init__(self, config_file_path):
+    def __init__(self, xml_string):
+#        self.__xml_file_path=config_file_path
+#        tree = ET.parse(config_file_path)
+        root = ET.fromstring(xml_string)
+#        root = tree.getroot() #this is the xml node
         self.seed=int(root.attrib["seed"])
         self.length=int(root.attrib["length"])
         bool(root.attrib["debug"])
