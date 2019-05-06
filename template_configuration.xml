@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation seed="31" length="100" debug="false">
+	<!-- define the types of objects in the world and their behaviors -->
+	<objects>
+		<!-- define an agent-like object -->
+		<object type="1">
+			<rules>
+				<rule id="d1">
+					<conditions neighborhood="0,0"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="2" />
+					</actions>
+				</rule>
+				<rule id="d2">
+					<conditions neighborhood="0,0"/>
+					<actions p="1">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="3" />
+					</actions>
+				</rule>
+				<rule id="d3">
+					<conditions neighborhood="2,0"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="2" />
+					</actions>
+				</rule>
+				<rule id="d4">
+					<conditions neighborhood="3,0"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="2" />
+					</actions>
+				</rule>
+				<rule id="d5">
+					<conditions neighborhood="2,0"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="3" />
+					</actions>
+				</rule>
+				<rule id="d6">
+					<conditions neighborhood="3,0"/>
+					<actions p="1">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="3" />
+					</actions>
+				</rule>
+				<rule id="d7">
+					<conditions neighborhood="2,2"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="2" />
+					</actions>
+				</rule>
+				<rule id="d8">
+					<conditions neighborhood="2,2"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="3" />
+					</actions>
+				</rule>
+				<rule id="d9">
+					<conditions neighborhood="2,3"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="2" />
+					</actions>
+				</rule>
+				<rule id="d10">
+					<conditions neighborhood="2,3"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="3" />
+					</actions>
+				</rule>
+				<rule id="d11">
+					<conditions neighborhood="3,2"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="2" />
+					</actions>
+				</rule>
+				<rule id="d12">
+					<conditions neighborhood="3,2"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="3" />
+					</actions>
+				</rule>
+				<rule id="d13">
+					<conditions neighborhood="3,3"/>
+					<actions p="0">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="2" />
+					</actions>
+				</rule>
+				<rule id="d14">
+					<conditions neighborhood="3,3"/>
+					<actions p="1">
+						<move offset="-1,0,0"/>
+						<set offset="1,0,0" type="3" />
+					</actions>
+				</rule>
+
+
+				<rule id="p9">
+					<conditions neighborhood="2,3"/>
+					<actions p="0">
+						<set offset="1,0,0" type="0" />
+						<move offset="1,0,0"/>
+					</actions>
+				</rule>
+				<rule id="p10">
+					<conditions neighborhood="3,2"/>
+					<actions p="0">
+						<set offset="1,0,0" type="0" />
+						<move offset="1,0,0"/>
+					</actions>
+				</rule>
+				<rule id="p11">
+					<conditions neighborhood="2,2"/>
+					<actions p="0">
+						<set offset="1,0,0" type="0" />
+						<move offset="1,0,0"/>
+					</actions>
+				</rule>
+				<rule id="p12">
+					<conditions neighborhood="3,3"/>
+					<actions p="0">
+						<set offset="1,0,0" type="0" />
+						<move offset="1,0,0"/>
+					</actions>
+				</rule>
+				<rule id="p13">
+					<conditions neighborhood="2,0"/>
+					<actions p="0">
+						<set offset="1,0,0" type="0" />
+						<move offset="1,0,0"/>
+					</actions>
+				</rule>
+				<rule id="p14">
+					<conditions neighborhood="3,0"/>
+					<actions p="0">
+						<set offset="1,0,0" type="0" />
+						<move offset="1,0,0"/>
+					</actions>
+				</rule>
+			</rules>
+		</object>
+		<object type="2" />
+		<object type="3" />
+	</objects>
+	<!-- define the size (and dimensions) of the world -->
+	<world size="200,1,1" range_of_neighborhood="2">
+		<!-- Note that all insertions are displaced by R in each axis because of the padding -->
+		<insert type="1" index="100,0,0" orientation="2" id="2"/>
+		<insert type="1" index="99,0,0" orientation="0" id="1"/>
+	</world>
+	<!-- visualization settings -->
+	<visualization interactive="false" elevation="90" azimuth="90">
+		<theme>
+			<color type="1" color="0,1,0,1" />
+			<color type="2" color="0,0,1,1" />
+			<color type="3" color="1,0,0,1" />
+			<color type="4" color="1,1,0,1" />
+			<color type="5" color="1,0,1,1" />
+			<color type="6" color="0,1,1,0.2" />
+			<color type="7" color="0,0,0,0" />
+			<color type="8" color="0,0,0,0" />
+			<color type="9" color="0,0,0,0" />
+		</theme>
+	<!-- <save format="png" period="1" resolution="12.80,10.24" elevation="90" azimuth="90" /> -->
+		<save format="compressed_report" period="1" /> <!--it is always 1 -->
+		<save format="npz" period="1" />
+	</visualization>
+</simulation>
